@@ -167,12 +167,12 @@ ns-trian block-baking --config path/to/config
 
 If you use this repo or find the documentation useful for your research, please consider citing:
 ```
-@article{song2023city,
+@inproceedings{song2024city,
     title={City-on-Web: Real-time Neural Rendering of Large-scale Scenes on the Web},
-    author={Song, Kaiwen and Zhang, Juyong},
-    journal={arXiv preprint arXiv:2312.16457},
-    year={2023}
-    }
+    author={Kaiwen Song and Xiaoyi Zeng and Chenqu Ren and Juyong Zhang},
+    booktitle = {European Conference on Computer Vision (ECCV)},
+    year={2024}
+}
 
 ```
 
