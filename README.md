@@ -1,6 +1,6 @@
 # City-on-Web
 
-<img src="assets/campus_short.gif" height="324"/> <img src="assets/mc_02.gif" height="324"/>
+<img src="assets/campus_short.gif" height="280"/> <img src="assets/mc_02.gif" height=""/>
 
 Ever wanted to render a (large-scale) NeRF scene in real-time on the web? Welcome to try our code.
 
