@@ -11,6 +11,7 @@ This repository contains the official implementation of city-on-web and the PyTo
 > _European Conference on Computer Vision_ (__ECCV__)  
 > [Project page](https://ustc3dv.github.io/City-on-Web/)&nbsp;/ [Paper](https://arxiv.org/abs/2312.16457)&nbsp;/ [Twitter](https://x.com/_akhaliq/status/1740589735024975967)&nbsp;
 
+_If you have any question on this repo, feel free to open an issue or contact SA21001046@mail.ustc.edu.cn._
 ## Pipeline
 <img src="https://raw.githubusercontent.com/kevin2000A/City-on-Web/main/assets/Pipeline.png"/> 
 
@@ -18,7 +19,7 @@ During the training phase, we uniformly partition the scene and reconstruct it a
 
 
 ## Core Idea of block-based volume rendering
-<!-- <video src="assets/diff.mp4"/>  -->
+<img src="assets/vr.png"/>
 Unlike existing block-based methods that require the resources of all blocks to be loaded simultaneously for rendering, our strategy can be rendered independently using its own texture in its own shader. _This novel strategy supports asynchronous resource loading and independent rendering, which allows the strategy to be applied to other resource-independent environments, paving the way for further research and applications_. We are very pleased to see this strategy being applied to other large-scale scene reconstruction scenarios, such as multi-GPU parallel or distributed training of NeRF, and even  Gaussian splatting.
 
 
@@ -144,6 +145,9 @@ curl https://unpkg.com/stats-js@1.0.1/build/stats.min.js --output third_party/st
 ```
 
 
+Our web viewer is hosted on `largeviewer` folder. Notably, some parameters need to be specified during rendering, such as the position of each block, which can be automatically obtained from the input data. We will update later to automatically adapt the baking results with the real-time viewer.
+
+
 ## City-on-Web Workflow
 
 
@@ -159,10 +163,9 @@ To bake a reconstructed large scale scene, simply use the following command and 
 ns-trian block-baking --config path/to/config
 ```
 
-### Real-Time Rendering 
-
-
 ## Citation
+
+If you use this repo or find the documentation useful for your research, please consider citing:
 ```
 @article{song2023city,
     title={City-on-Web: Real-time Neural Rendering of Large-scale Scenes on the Web},
@@ -174,4 +177,4 @@ ns-trian block-baking --config path/to/config
 ```
 
 ## Ackownledgements
-This repository's code is based on [nerfstudio](https://github.com/nerfstudio-project/nerfstudio) and [MERF](). We are very grateful for their outstanding work.
+This repository's code is based on [nerfstudio](https://github.com/nerfstudio-project/nerfstudio) and [MERF](https://github.com/google-research/google-research/tree/master/merf). We are very grateful for their outstanding work.
