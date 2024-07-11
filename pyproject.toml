@@ -1,0 +1,22 @@
+
+[project]
+name = "merf"
+version = "0.1"
+
+dependencies = [
+    "nerfstudio",
+    'torch-dct',
+    'absl-py>=0.1.9',
+    'mpmath>=1.1.0', # you may want to consider pinning the version, ie "nerfstudio==0.1.19"
+]
+
+[tool.setuptools.packages.find]
+include = ["merf*"]
+
+[project.scripts]
+# Note, add entrypoint name to nerfstudio/scripts/completions/install.py to include CLI completion
+ns-baking = "merf.baking.baking:entrypoint"
+
+ 
+[project.entry-points.'nerfstudio.method_configs']
+merf-ns = 'merf.merf_config:MERFNS'

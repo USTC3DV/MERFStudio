@@ -1,0 +1,22 @@
+
+[project]
+name = "block_merf"
+version = "0.1"
+
+dependencies = [
+    "nerfstudio",
+    'torch-dct',
+    'absl-py>=0.1.9',
+    'mpmath>=1.1.0',
+    'basicsr', # you may want to consider pinning the version, ie "nerfstudio==0.1.19"
+]
+
+[tool.setuptools.packages.find]
+include = ["block_merf*"]
+
+[project.scripts]
+# Note, add entrypoint name to nerfstudio/scripts/completions/install.py to include CLI completion
+ns-blockbaking = "block_merf.baking.baking:entrypoint"
+ 
+[project.entry-points.'nerfstudio.method_configs']
+block-merf = 'block_merf.block_config:BLOCKMERF'
